@@ -1,4 +1,4 @@
 # Front-end-Projeto-de-conclus-o
 Projeto Final - Front-end - Curso Tivit / Alura - Acelera DEVs - Edição Mulheres.
 
-Projeto sites com HTML, CSS e Javascript desenvolvido no Curso da Tivit/Alura (AluraConf) e curso de Informática (Novo HOrizonte).
+Projetos: sites com HTML, CSS e Javascript desenvolvidos nos Cursos da Tivit/Alura (AluraConf) e curso Técnico de Informática (Novo Horizonte).
