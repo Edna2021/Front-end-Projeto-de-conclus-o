@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Novidades </title>
+
+
+
+<link rel="stylesheet" href="style.css">
+
+<div class="cabecalho">
+<p> SAC: (011) 2334-8500 <img class="SAC" src="Imagens/iconos-senoritaSAC.png" width="55" height="49" alt=""/></p>
+
+<script type="text/javascript">
+msg = "SEU ELO DE LIGAÇÃO PARA AS GRANDES METRÓPOLIS!";   // Mensagem aqui
+        x = 303;
+        inicio = 300;    // ponto em pixels onde começa o efeito 
+        fim = 450;      // ponto em pixels onde termina o efeito
+        vai = true;
+        z = true; 
+        c = 0;          // variável responsável pela mudança de cores 
+        quicar = 1;     // 1 para quicar, 0 para rolar normalmente
+        piscar = 1;     // 1 para piscar, 0 para não piscar
+        movimentar = 1; // 1 para movimentar, 0 para parar
+        tempo = 35;     // tempo em milissegundos
+        
+        function Marquee() {
+          document.getElementById("marquee").innerHTML = msg;
+          document.getElementById("marquee").style.color = "#12" + c+c;
+          if (movimentar == 1) {
+            document.getElementById("marquee").style.top = (quicar == 1) ? (100 + 25 * Math.sin(5 *((Math.PI * x)/180)) + "px") : (100 + "px");  // Eixo X
+            document.getElementById("marquee").style.left = x + "px";  // Eixo Y
+
+            if (vai) {    
+              x++;
+              if (x >= fim) {
+                vai = false;
+              }
+            }
+            else {
+              x--;
+              if (x <= inicio) {
+                vai = true;
+              }
+            }
+          }
+          if (piscar == 1) {
+            (z == true) ? c++ : c--;
+            if (c == 9)
+              z = false;
+            else if (c == 0)
+              z = true;
+          }
+          setTimeout("Marquee()", tempo) 
+        }
+</script>
+
+
+<div class="calendario">
+		<script type="text/javascript">
+			hoje = new Date();
+			dia=hoje.getDate();
+			dias=hoje.getDay();
+			mes=hoje.getMonth();
+			ano=hoje.getUTCFullYear();
+
+		
+			function CriarArray (n) 
+			{
+				this.length = n;
+			}
+
+		NomeDia = new CriarArray(7);
+		NomeDia[0]="Domingo";
+		NomeDia[1]="Segunda";
+		NomeDia[2]="Terça";
+		NomeDia[3]="Quarta";
+		NomeDia[4]="Quinta";
+		NomeDia[5]="Sexta";
+		NomeDia[6]="Sábado";
+
+
+		NomeMes = new CriarArray(12);
+		NomeMes[0]="Janeiro";
+		NomeMes[1]="Fevereiro";
+		NomeMes[2]="Março";
+		NomeMes[3]="Abril";
+		NomeMes[4]="Maio";
+		NomeMes[5]="Junho";
+		NomeMes[6]="Julho";
+		NomeMes[7]="Agosto";
+		NomeMes[8]="Setembro";
+		NomeMes[9]="Outubro";
+		NomeMes[10]="Novembro";
+		NomeMes[11]="Dezembro";
+
+
+		function Data()
+		{
+			document.write(NomeDia[dias]+" , "+dia+"  de  " + NomeMes[mes]+ " de " + ano+"<br>");
+		}
+
+		</script>
+
+	<center>
+		
+		<script type="text/javascript">
+			Data();
+			var dDay = new Date();
+			var nHours = dDay.getHours();
+			if ((nHours<12) && (nHours>=5)) { document.write("Bom dia!")};
+			if ((nHours>=12) && (nHours<19)) { document.write("Bom Tarde!")};
+			if ((nHours>=19) && (nHours<24)) { document.write("Bom Noite!")};
+			if ((nHours>=0) && (nHours<=12)) { document.write("Boa Madrugada!")};
+
+		</script>
+
+	</center>
+
+	</div>
+
+</div>
+
+</head>
+
+
+<body class="Corpo2" onload="Marquee('<%=Marquee%>');mudarImagem('<%=mudarImagem%>')">
+<div style="font: 16px Verdana; position: fixed; top: 100px; left: 150px; height: 10px" id="marquee"></div>
+<nav class="menu">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Empresa.html">Empresa</a>
+			<ul>
+			<li><a href="QuemSomos.html"> Quem Somos </a></li>
+			<li><a href="Nossa Politica.html"> Nossa Política </a></li>
+			</ul>
+		</li>
+		<li><a href=" ">Serviços</a>
+			<ul>
+				<li><a href="Frota.html"> Nossa Frota </a</li>
+			<li><a href="Tipo de servicos.html"> Tipo de Serviços </a</li>
+			</ul>
+		</li>
+		<li><a href="Consultas.html"> Consulta de Preços </a></li>
+		<li><a href="Novidades.html"> Novidades </a>
+		<ul>
+			<li><a href="Campionedd.html">Novo Campione</a></li>
+			<li><a href="g7dd.html">Novo Paradiso</a></li>
+		</ul>
+	</li>		
+		<li><a href="Contatos.html"> Contato</a></li>
+	</ul>
+</nav>
+
+
+</style>
+
+</head>
+
+<body>
+
+<div  align="center" class="calc">
+<h1><center><font Bookman Old Style color="#004080"  size="5"></b>Calculadora com botões</font></h1>
+<form name="cadastro">
+
+	<input type="button" name=" " value="7"  onclick="cadastro.Input.value +=('7')">
+		<input type="button" name=" " value="8"  onclick="cadastro.Input.value +=('8')">
+			<input type="button" name=" " value="9"  onclick="cadastro.Input.value +=('9')">
+				<input type="button" name=" " value="/"  onclick="cadastro.Input.value +=('/')"><br><br>
+				
+					<input type="button" name=" " value="4"  onclick="cadastro.Input.value +=('4')">
+						<input type="button" name=" " value="5"  onclick="cadastro.Input.value +=('5')">
+							<input type="button" name=" " value="6"  onclick="cadastro.Input.value +=('6')">
+									<input type="button" name=" " value="*"  onclick="cadastro.Input.value +=('*')"><br><br>
+							
+		<input type="button" name="Um " value="1"  onclick="cadastro.Input.value +=('1')">
+			<input type="button" name=" " value="2"  onclick="cadastro.Input.value +=('2')">
+				<input type="button" name=" " value="3"  onclick="cadastro.Input.value +=('3')">
+					<input type="button" name=" " value="-"  onclick="cadastro.Input.value +=('-')"><br><br>
+				
+								<input type="button" name=" " value="0"  onclick="cadastro.Input.value +=('0')">
+									<input type="button" name=" " value=" +"  onclick="cadastro.Input.value +=('+')">
+											<input  type="button" name="Resultado"  value=" = " onClick="cadastro.Input.value = eval(cadastro.Input.value)">
+														<input type="button" name="clear"  value=" c " onClick="cadastro.Input.value = ''"><br><br>
+			
+																				Resultado: <input type="text" name="Input" SIZE="10"><br><br>
+									
+					<br>
+					</form>
+					
+					
+					</div>
+
+
+
+<table  border="1px" bordercolor=#00009B width="550px" oninput="total.value = (pessoas.valueAsNumber * 780) +  ((vaivem.valueAsNumber - 1) * 780)">
+<tr width="200px"> 
+  <td colspan="2" align="center"><label><a ref="" onMouseOver="alert('Promoção Relâmpago. Aproveite e calcule os custos de sua viagem na calculadora ao lado:')"> Passe seu mouse Aqui. </a></label></td>
+  </tr>
+  <tr width="200px">
+  <td width="350px"><label>Nome:</label></td>
+  <td><input type="text" id="Nome" name="Nome" placeholder="Zezinho" required></td>
+  </tr>
+  
+   <tr width="200px">
+   <td width="350px"><label>Email:</label></td>
+  <td><input type="email" id="Email" name="Email" required></td>
+
+   <tr width="200px">
+   <td width="350px"><label>Confirmar Email:</label></td>
+ <td> <input type="email" id="EmailConfir" name="EmailConfir" required  oninput="check(this)"></td>
+ </tr>
+
+   <tr width="350px">
+   <td width="350px"><label>Quantidade de Pessoas (R$ 780,00 cada):</label></td>
+  <td><input type="number" id="pessoas" name="pessoas" value="1" min="1" max="42" required></td>
+  </tr>
+
+   <tr width="200px">
+    <td width="100px"><label> Apenas para Ida - escolha 1 </label></td>
+    <td rowspan="2"><input type="number" width="80px" id="vaivem" name="vaivem" value="1" min="1" max="2" required></td>
+    </tr>
+   <tr width="100px"><td><label> Ida e Volta - escolha 2:</label>
+   </tr>
+    </tr>
+   
+   <tr width="300px">
+   <td><label>Total Geral:</label></td>
+  <td>R$ <output id="total" name="total">0</output>.00  </td>
+   </tr>
+
+  <tr> 
+  <td colspan="2" align="center"><label>Promoção Relâmpago</label></td>
+  </tr>
+  
+   <tr>
+   <td colspan="2" align="center"><input  type="submit" width="150px" value="Solicitação de Reserva" onclick="alert('Passagem reservada. Poderá cancelar até 7 dias')"/></td>
+   <tr></tr>
+   </tr>
+
+</table>
+
+<script>
+function check(input) {
+  if (input.value != document.getElementById('Email').value) {
+    input.setCustomValidity('Os emails precisam ser iguais.');
+  } else {
+    // entrada valida -- reset the error message
+    input.setCustomValidity('');
+  }
+}
+</script>
+
+</div>
+
+
+</body>
+</html>

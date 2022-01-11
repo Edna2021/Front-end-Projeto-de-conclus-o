@@ -1,0 +1,178 @@
+.cabecalho{
+	width: 100%;
+	height: 50px;
+	background-color:#0080C0;
+	position: fixed;
+	top: 0px;
+	left:0px;
+	padding: 10px;
+}
+
+.calendario{
+	position: relative;
+	margin-top: -50px;
+	left: 150px;
+	color: black;
+}
+
+.SAC{
+	position: fixed;
+	float: right;
+	top: 10px;
+	left: 160px;
+	clear: both;
+}
+
+.slogan{
+	position: relative;
+	font-family: Bookman Old Style;
+	font-size: 10px;
+	color: #D7D700;
+	font-style: italic;
+	float: left;
+	left: 300px;
+	top: 50px;
+}
+
+.menu{
+	position: absolute;
+	clear: left;
+	top: 240px;
+	width: 100%;
+	heigth: 50px;
+	display: inline-block;
+	left: 45px;
+}
+
+.menu ul li{
+	color: #000000;
+	float: left;
+	width: 150px;
+	height: 40px;
+	display: inline-block;
+	text-align: center;
+	line-height: 40px;
+}
+
+.menu ul li:hover {	 
+	 background-color: #FFFF00;
+}
+
+.menu ul {
+	padding: 0;
+}
+
+.menu ul ul {
+	display: none;
+}
+
+.menu ul li:hover > ul{
+	display: block;
+}
+
+.menu ul  ul li:hover {
+	 background-color: #A6A6A6;
+}
+
+
+.configImagens{
+height:200px;
+width:200px;
+}
+
+#imagens{
+width:1020px;
+margin:auto;
+}
+
+#imgPrincipal{
+height:500px;
+width:500px;
+}
+
+#principal{
+width:500px;
+margin:auto;
+}
+
+
+table {
+font-size: 20px;
+text-align: left;
+color: #0000FF;
+background-color: #FFFF80;
+position: relative;
+top: 370px;
+left: 0px;
+border: 2px solid #0000FF;
+}
+
+.corpo {
+	position: relative;
+	float: left;
+	top: 400px;
+	text-align: justify;
+	color: #0000A0;
+	text-indent: 15px;
+	font-family: Book Antiqua;
+}
+
+.Corpo2{
+display: flex;
+float: left;
+margin-top: 10px;
+background-image:url("Imagens/Fundo.jpeg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.Corpo3{
+	position: absolute;
+	top: 400px;
+	text-align: justify;
+	color: #0000A0;
+	text-indent: 15px;
+	font-family: Book Antiqua;
+}
+
+.estrutura{
+	position: relative;
+  margin-top: 650px;
+ }
+ 
+ .estrutura1{
+	position: relative;
+  margin-top: 700px;
+ }
+ 
+ #banner{
+ position: relative;
+ float: left;
+ top: 420px;
+ left: 70px;
+ }
+ 
+   
+ .Preco
+ {
+ 	left: 15px;
+ 	text-align: center;
+ 
+ }
+ 
+ .calc{
+ 	position: absolute;
+ 	top: 380px;
+ 	width: 500px;
+ 	left: 530px;
+ 	background-color:#C0C0C0 ;
+ }
+
+.formulario{
+	background-color: "blue";
+	position: fixed;
+	width: 180px;
+	height: 300px;
+	top: 700px;
+}
+

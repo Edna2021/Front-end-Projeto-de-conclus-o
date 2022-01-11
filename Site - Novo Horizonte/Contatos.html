@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Novo Horizonte - Transporte </title>
+
+
+
+<link rel="stylesheet" href="style.css">
+
+<div class="cabecalho">
+<p> SAC: (011) 2334-8500 <img class="SAC" src="Imagens/iconos-senoritaSAC.png" width="55" height="49" alt=""/></p>
+
+<script type="text/javascript">
+msg = "SEU ELO DE LIGAÇÃO PARA AS GRANDES METRÓPOLIS!";   // Mensagem aqui
+        x = 303;
+        inicio = 300;    // ponto em pixels onde começa o efeito 
+        fim = 450;      // ponto em pixels onde termina o efeito
+        vai = true;
+        z = true; 
+        c = 0;          // variável responsável pela mudança de cores 
+        quicar = 1;     // 1 para quicar, 0 para rolar normalmente
+        piscar = 1;     // 1 para piscar, 0 para não piscar
+        movimentar = 1; // 1 para movimentar, 0 para parar
+        tempo = 35;     // tempo em milissegundos
+        
+        function Marquee() {
+          document.getElementById("marquee").innerHTML = msg;
+          document.getElementById("marquee").style.color = "#12" + c+c;
+          if (movimentar == 1) {
+            document.getElementById("marquee").style.top = (quicar == 1) ? (100 + 25 * Math.sin(5 *((Math.PI * x)/180)) + "px") : (100 + "px");  // Eixo X
+            document.getElementById("marquee").style.left = x + "px";  // Eixo Y
+
+            if (vai) {    
+              x++;
+              if (x >= fim) {
+                vai = false;
+              }
+            }
+            else {
+              x--;
+              if (x <= inicio) {
+                vai = true;
+              }
+            }
+          }
+          if (piscar == 1) {
+            (z == true) ? c++ : c--;
+            if (c == 9)
+              z = false;
+            else if (c == 0)
+              z = true;
+          }
+          setTimeout("Marquee()", tempo) 
+        }
+</script>
+
+
+<div class="calendario">
+		<script type="text/javascript">
+			hoje = new Date();
+			dia=hoje.getDate();
+			dias=hoje.getDay();
+			mes=hoje.getMonth();
+			ano=hoje.getUTCFullYear();
+
+		
+			function CriarArray (n) 
+			{
+				this.length = n;
+			}
+
+		NomeDia = new CriarArray(7);
+		NomeDia[0]="Domingo";
+		NomeDia[1]="Segunda";
+		NomeDia[2]="Terça";
+		NomeDia[3]="Quarta";
+		NomeDia[4]="Quinta";
+		NomeDia[5]="Sexta";
+		NomeDia[6]="Sábado";
+
+
+		NomeMes = new CriarArray(12);
+		NomeMes[0]="Janeiro";
+		NomeMes[1]="Fevereiro";
+		NomeMes[2]="Março";
+		NomeMes[3]="Abril";
+		NomeMes[4]="Maio";
+		NomeMes[5]="Junho";
+		NomeMes[6]="Julho";
+		NomeMes[7]="Agosto";
+		NomeMes[8]="Setembro";
+		NomeMes[9]="Outubro";
+		NomeMes[10]="Novembro";
+		NomeMes[11]="Dezembro";
+
+
+		function Data()
+		{
+			document.write(NomeDia[dias]+" , "+dia+"  de  " + NomeMes[mes]+ " de " + ano+"<br>");
+		}
+
+		</script>
+
+	<center>
+		
+		<script type="text/javascript">
+			Data();
+			var dDay = new Date();
+			var nHours = dDay.getHours();
+			if ((nHours<12) && (nHours>=5)) { document.write("Bom dia!")};
+			if ((nHours>=12) && (nHours<19)) { document.write("Bom Tarde!")};
+			if ((nHours>=19) && (nHours<24)) { document.write("Bom Noite!")};
+			if ((nHours>=0) && (nHours<=12)) { document.write("Boa Madrugada!")};
+
+		</script>
+
+	</center>
+
+	</div>
+
+</div>
+<script LANGUAGE="JAVASCRIPT">
+
+NOME=window.prompt("digite seu nome","nome")
+conf=window.confirm("Sejam Bem Vindos ao nosso site: Viação Novo Horizonte!,"+ NOME + "?")
+if(conf==true){
+document.write("Olá como vai?, "+ NOME)
+}else{
+window.alert("Então Adeus")
+}
+
+</script>
+<br>
+<br>
+<style type="text/css">
+#divZoom {position: relative; left: 500px; top:770px; width:100%; text-align:center;} 
+</style><h6>
+<script language="JavaScript" type="text/javascript">
+function lib_bwcheck(){ 
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=this.agent.indexOf("Opera 5")>-1
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=new lib_bwcheck()
+
+
+
+zText=new Array('Site','Entre ','em','Contato conosco!!')
+  
+
+zColor=new Array('#000000','#000000','#ff00cc','#000000','#FF00CC')
+ 
+var zEndSize=70   
+var zSpeed=40    
+var zAddSize=5    
+var zFadeSpeed=70 
+var zFont='arial black,arial,helvetica,sans-serif' 
+var zHide=true    
+var zHideWait=70  
+var zStartSize=10 
+var zEndCode=""   
+
+
+function makeZoomObj(obj,font,size,endsize,color,text,zspeed,fadespeed,addsize,hide,hidewait,endcode){
+   	this.css=bw.dom? document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?document.layers[obj]:0;	
+   	this.writeref=bw.dom? document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?document.layers[obj].document:0;	
+	this.zoomWrite=b_zoomWrite;	this.zoomIt=b_zoomIt; this.fadeIt=b_fadeIt;	this.zoomFade=b_zoomFade;
+	this.font=font; this.color=new Array(); this.color=eval(color);	this.text=new Array(); this.text=eval(text);
+	this.zspeed=zspeed; this.fadespeed=fadespeed; this.addsize=addsize; this.endcode=endcode
+	this.hide=hide; this.hidewait=hidewait; this.size=size; this.startsize=size; this.endsize=endsize
+	if(size<endsize){this.way="<"; this.addsize=this.addsize
+    }else{this.way=">"; this.addsize=-this.addsize}
+	if(bw.dom || bw.ie4){ 
+		this.css.fontFamily=this.font; this.css.fontSize=this.size+"px"; this.css.color=this.color[0]
+	}
+	this.obj = obj + "Object"; 	eval(this.obj + "=this"); return this
+}
+function b_zoomFade(num){
+	if(num<this.text.length){
+		this.size=this.startsize
+		this.zoomIt(num,'this.zoomFade('+(num+1)+')')
+	}
+	else if(num==this.text.length) this.fadeIt(0,'this.zoomFade('+(num+1)+')')
+	else if(this.hide) setTimeout(this.obj+".css.visibility='hidden'; eval("+this.obj+".endcode)",this.hidewait)
+}
+function b_zoomWrite(num,cnum){
+	if(bw.ns4){
+		this.writeref.write('<span style="text-align:center; font-size:' +this.size+'px; font-family:'+this.font+'; color:'+this.color[cnum]+'">'+this.text[num]+'</span>')
+		this.writeref.close()
+	}else this.writeref.innerHTML="<center>"+this.text[num]+"</center>"
+}
+function b_zoomIt(num,fn){
+	if(eval(this.size+this.way+this.endsize)){
+		if(this.size==this.startsize || bw.ns4) this.zoomWrite(num,0)
+		if(bw.dom || bw.ie4) this.css.fontSize=this.size+"px"
+		this.size=this.size+this.addsize
+		setTimeout(this.obj+".zoomIt("+num+",'"+fn+"')",this.zspeed)
+	}else eval(fn)	
+}
+function b_fadeIt(num,fn){
+	if(num<this.color.length){
+		if(bw.ns4) this.zoomWrite(this.text.length-1,num)
+		else this.css.color=this.color[num]
+		num++
+		setTimeout(this.obj+".fadeIt("+num+",'"+fn+"')",this.fadespeed)
+	}else eval(fn)	
+}
+
+function zoomInit(){
+	if(bw.bw){
+		oZoom=new makeZoomObj('divZoom',zFont,zStartSize,zEndSize,'zColor','zText',zSpeed,zFadeSpeed,zAddSize,zHide,zHideWait,zEndCode)
+		oZoom.zoomFade(0)
+		oZoom.css.visibility='visible'
+	}
+}
+
+</script>
+
+<h6>
+		<script>
+ function showTimer() {
+  var time=new Date();
+  var hour=time.getHours();
+  var minute=time.getMinutes();
+  var second=time.getSeconds();
+  if(hour<10)   hour  ="0"+hour;
+  if(minute<10) minute="0"+minute;
+  if(second<10) second="0"+second;
+  var st=hour+":"+minute+":"+second;
+  document.getElementById("timer").innerHTML=st; 
+ }
+ function initTimer() {
+ 
+  setInterval(showTimer,1000);
+ }
+</script></h6>
+		<br>
+
+</head>
+
+<body marginleft="0" marginheight="0">
+
+<div id="divZoom" align="center"></div>
+
+<a href="#" onclick="zoomInit(); return false"><h6>Clique aqui !!</h6></a>
+
+	
+	<br>
+
+
+<body class="Corpo2" onload="Marquee('<%=Marquee%>');mudarImagem('<%=mudarImagem%>')">
+<div style="font: 16px Verdana; position: fixed; top: 100px; left: 150px; height: 10px" id="marquee"></div>
+<nav class="menu">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Empresa.html">Empresa</a>
+			<ul>
+			<li><a href="QuemSomos.html"> Quem Somos </a></li>
+			<li><a href="Nossa Politica.html"> Nossa Política </a></li>
+			</ul>
+		</li>
+		<li><a href=" ">Serviços</a>
+			<ul>
+				<li><a href="Frota.html"> Nossa Frota </a</li>
+			<li><a href="Tipo de servicos.html"> Tipo de Serviços </a</li>
+			</ul>
+		</li>
+		<li><a href="Consultas.html"> Consulta de Preços </a></li>
+		<li><a href="Novidades.html"> Novidades </a>
+		<ul>
+			<li><a href="Campionedd.html">Novo Campione</a></li>
+			<li><a href="g7dd.html">Novo Paradiso</a></li>
+		</ul>
+	</li>		
+		<li><a href="Contatos.html"> Contato</a></li>
+	</ul>
+</nav>
+
+
+</body>
+</html>

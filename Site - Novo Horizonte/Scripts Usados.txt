@@ -1,0 +1,14 @@
+Scripts utilizados
+
+marquee
+inner html
+getelementbyid.stile color 
+script data 
+hora dia mês e ano 
+onclick
+slide
+windows prompt arlet
+confirme
+check
+zomm
+onload

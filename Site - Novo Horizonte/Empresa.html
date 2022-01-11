@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Empresa </title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<div class="cabecalho">
+<p> SAC: (011) 2334-8500 <img class="SAC" src="Imagens/iconos-senoritaSAC.png" width="55" height="49" alt=""/></p>
+
+<script type="text/javascript">
+msg = "SEU ELO DE LIGAÇÃO PARA AS GRANDES METRÓPOLIS!";   // Mensagem aqui
+        x = 303;
+        inicio = 300;    // ponto em pixels onde começa o efeito 
+        fim = 450;      // ponto em pixels onde termina o efeito
+        vai = true;
+        z = true; 
+        c = 0;          // variável responsável pela mudança de cores 
+        quicar = 1;     // 1 para quicar, 0 para rolar normalmente
+        piscar = 1;     // 1 para piscar, 0 para não piscar
+        movimentar = 1; // 1 para movimentar, 0 para parar
+        tempo = 35;     // tempo em milissegundos
+        
+        function Marquee() {
+          document.getElementById("marquee").innerHTML = msg;
+          document.getElementById("marquee").style.color = "#12" + c+c;
+          if (movimentar == 1) {
+            document.getElementById("marquee").style.top = (quicar == 1) ? (100 + 25 * Math.sin(5 *((Math.PI * x)/180)) + "px") : (100 + "px");  // Eixo X
+            document.getElementById("marquee").style.left = x + "px";  // Eixo Y
+
+            if (vai) {    
+              x++;
+              if (x >= fim) {
+                vai = false;
+              }
+            }
+            else {
+              x--;
+              if (x <= inicio) {
+                vai = true;
+              }
+            }
+          }
+          if (piscar == 1) {
+            (z == true) ? c++ : c--;
+            if (c == 9)
+              z = false;
+            else if (c == 0)
+              z = true;
+          }
+          setTimeout("Marquee()", tempo) 
+        }
+</script>
+
+
+<div class="calendario">
+		<script type="text/javascript">
+			hoje = new Date();
+			dia=hoje.getDate();
+			dias=hoje.getDay();
+			mes=hoje.getMonth();
+			ano=hoje.getUTCFullYear();
+
+		
+			function CriarArray (n) 
+			{
+				this.length = n;
+			}
+
+		NomeDia = new CriarArray(7);
+		NomeDia[0]="Domingo";
+		NomeDia[1]="Segunda";
+		NomeDia[2]="Terça";
+		NomeDia[3]="Quarta";
+		NomeDia[4]="Quinta";
+		NomeDia[5]="Sexta";
+		NomeDia[6]="Sábado";
+
+
+		NomeMes = new CriarArray(12);
+		NomeMes[0]="Janeiro";
+		NomeMes[1]="Fevereiro";
+		NomeMes[2]="Março";
+		NomeMes[3]="Abril";
+		NomeMes[4]="Maio";
+		NomeMes[5]="Junho";
+		NomeMes[6]="Julho";
+		NomeMes[7]="Agosto";
+		NomeMes[8]="Setembro";
+		NomeMes[9]="Outubro";
+		NomeMes[10]="Novembro";
+		NomeMes[11]="Dezembro";
+
+
+		function Data()
+		{
+			document.write(NomeDia[dias]+" , "+dia+"  de  " + NomeMes[mes]+ " de " + ano+"<br>");
+		}
+
+		</script>
+
+	<center>
+		
+		<script type="text/javascript">
+			Data();
+			var dDay = new Date();
+			var nHours = dDay.getHours();
+			if ((nHours<12) && (nHours>=5)) { document.write("Bom dia!")};
+			if ((nHours>=12) && (nHours<19)) { document.write("Bom Tarde!")};
+			if ((nHours>=19) && (nHours<24)) { document.write("Bom Noite!")};
+			if ((nHours>=0) && (nHours<=12)) { document.write("Boa Madrugada!")};
+
+		</script>
+
+	</center>
+
+	</div>
+
+</div>
+
+<center>
+
+
+<body class="Corpo2" onload="Marquee('<%=Marquee%>');mudarImagem('<%=mudarImagem%>')">
+<div style="font: 16px Verdana; position: fixed; top: 100px; left: 150px; height: 10px" id="marquee"></div>
+<nav class="menu">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Empresa.html">Empresa</a>
+			<ul>
+			<li><a href="QuemSomos.html"> Quem Somos </a></li>
+			<li><a href="Nossa Politica.html"> Nossa Política </a></li>
+			</ul>
+		</li>
+		<li><a href=" ">Serviços</a>
+			<ul>
+				<li><a href="Frota.html"> Nossa Frota </a</li>
+			<li><a href="Tipo de servicos.html"> Tipo de Serviços </a</li>
+			</ul>
+		</li>
+		<li><a href="Consultas.html"> Consulta de Preços </a></li>
+		<li><a href="Novidades.html"> Novidades </a>
+		<ul>
+			<li><a href="Campionedd.html">Novo Campione</a></li>
+			<li><a href="g7dd.html">Novo Paradiso</a></li>
+		</ul>
+	</li>		
+		<li><a href="Contatos.html"> Contato</a></li>
+	</ul>
+</nav>
+
+<div Class="corpo">
+<center><b> História  </b><br></center>
+<p>
+A Viação Novo Horizonte é uma empresa de viação do estado da Bahia fundada em 1963. 
+Atua principalmente na região sudoeste do estado, genuinamente interiorana e, é responsável direta pela locomoção dos habitantes de mais de 100 (cem) municípios baianos, integrando-os às civilizações dos grandes centros do País, onde se destacam, principalmente, Salvador e São Paulo. É o elo de ligação social entre essas grandes metrópoles e os municípios quase desconhecidos, encravados nas "caatingas" dos médio São Francisco e Além São Francisco, dos grotões do centro da Chapada Diamantinae descampado sagrestes da Serra Geral.
+Outros destinos oferecidos estão Salvador, Brasília, Rio de Janeiro.
+Faz parte do consórcio responsável pelo transporte público em Mato Grosso.
+</p>
+ <center><br><b>Melhorias</b><br></center>
+<p>Em comemoração aos seus 50 anos, a Viação Novo Horizonte, em parceria com a montadora Comil, apresentaram o novo layout da frota da empresa. O anúncio ocorreu na página da companhia no Facebook. Ao todo, 20 unidades serão entregues, sendo veículos preparados para trechos de média e longa distâncias. Segundo a Comil, a Novo Horizonte será a primeira empresa a receber o modelo, baseado no chassi Mercedes-Benz O-500 RSD Euro V.
+Quem utiliza o transporte rodoviário dentro do estado da Bahia, ou até mesmo segue viagens a bordo de coletivos para a capital paulista, provavelmente já deve ter embarcado em um dos ônibus da companhia Novo Horizonte passagens.
+A empresa considerada por muitos, uma das melhores opções para se viajar pelo estado oferece uma verdade gama de serviços ligados ao setor de transportes rodoviários. Além de transportar milhares de passageiros que moram em mais de 100 cidades baianas pelas rotas estaduais e até mesmo interestaduais.
+A viação também trabalha com o serviço de carga e encomendas, faz locação de seus veículos para fretamento turístico, e fecha contratos exclusivos para servir de condução a funcionários de uma determinada empresa. 
+
+É por isso que a viação faz sucesso na Bahia.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Nossa Frota </title>
+
+<link rel="stylesheet" href="style.css">
+
+<div class="cabecalho">
+<p> SAC: (11) 2334-8500 <img class="SAC" src="Imagens/iconos-senoritaSAC.png" width="55" height="49" alt=""></p>
+
+<div class="slogan">
+</div>
+
+<div class="calendario">
+		<script type="text/javascript">
+			hoje = new Date();
+			dia=hoje.getDate();
+			dias=hoje.getDay();
+			mes=hoje.getMonth();
+			ano=hoje.getUTCFullYear();
+
+		
+			function CriarArray (n) 
+			{
+				this.length = n;
+			}
+
+		NomeDia = new CriarArray(7);
+		NomeDia[0]="Domingo";
+		NomeDia[1]="Segunda";
+		NomeDia[2]="Terça";
+		NomeDia[3]="Quarta";
+		NomeDia[4]="Quinta";
+		NomeDia[5]="Sexta";
+		NomeDia[6]="Sábado";
+
+
+		NomeMes = new CriarArray(12);
+		NomeMes[0]="Janeiro";
+		NomeMes[1]="Fevereiro";
+		NomeMes[2]="Março";
+		NomeMes[3]="Abril";
+		NomeMes[4]="Maio";
+		NomeMes[5]="Junho";
+		NomeMes[6]="Julho";
+		NomeMes[7]="Agosto";
+		NomeMes[8]="Setembro";
+		NomeMes[9]="Outubro";
+		NomeMes[10]="Novembro";
+		NomeMes[11]="Dezembro";
+
+
+		function Data()
+		{
+
+			document.write(NomeDia[dias]+" , "+dia+"  de  " + NomeMes[mes]+ " de " + ano+"<br>");
+		}
+
+		</script>
+
+	<center>
+		
+		<script type="text/javascript">
+			Data();
+			var dDay = new Date();
+			var nHours = dDay.getHours();
+			if ((nHours<12) && (nHours>=5)) { document.write("Bom dia!")};
+			if ((nHours>=12) && (nHours<19)) { document.write("Bom Tarde!")};
+			if ((nHours>=19) && (nHours<24)) { document.write("Bom Noite!")};
+
+		</script>
+
+	</center>
+
+	</div>
+
+</div>
+
+
+<script language="javascript">
+var imagens=[];
+imagens[0]="Imagens/CDD0.jpg";
+imagens[1]="Imagens/CDD1.jpg";
+imagens[2]="Imagens/CDD2.jpg";
+imagens[3]="Imagens/CDD3.jpg";
+imagens[4]="Imagens/CDD4.jpg";
+imagens[5]="Imagens/CDD5.jpg";
+imagens[6]="Imagens/CDD6.jpg";
+imagens[7]="Imagens/CDD7.jpg";
+
+
+var cont=0;
+function trocar(){
+document.getElementById("imgPrincipal").src=imagens[cont];
+cont++;
+if(cont==8){
+cont=0;
+}
+}
+setInterval(trocar,2000);
+function clicar(valor){
+document.getElementById("imgPrincipal").src=imagens[valor];
+}
+</script>
+
+</head>
+
+
+<body class="Corpo2">
+
+<nav class="menu">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Empresa.html">Empresa</a>
+			<ul>
+			<li><a href="QuemSomos.html"> Quem Somos </a></li>
+			<li><a href="Nossa Politica.html"> Nossa Política </a></li>
+			</ul>
+		</li>
+		<li><a href=" ">Serviços</a>
+			<ul>
+				<li><a href="Frota.html"> Nossa Frota </a</li>
+			<li><a href="Tipo de servicos.html"> Tipo de Serviços </a</li>
+			</ul>
+		</li>
+		<li><a href="Consultas.html"> Consulta de Preços </a></li>
+		<li><a href="Novidades.html"> Novidades </a></li>		
+		<li><a href="Contatos.html"> Contato</a></li>
+	</ul>
+</nav>
+
+<div class="Corpo3">
+<b> NOVO CAMPIONE 1200 INVICTOS 2018 </b><br>
+<p>Em comemoração aos seus 50 anos a novo horizonte junto a Comil lança o seu mais novo campione invictus 1800DD semi leito, tudo pelo bem estar e conforto dos seus passageiros com essa linda e confortável carroceria.
+Veja as fotos a baixo.</p>
+<br></br>
+</div>
+
+
+<div class="estrutura">
+<div id="principal">
+<img id="imgPrincipal" src="nhf1.jpg">
+</div>
+<div id="imagens">
+<img class="configImagens" src="Imagens/CDD0.jpg" onclick="clicar(0)">
+<img class="configImagens" src="Imagens/CDD1.jpg" onclick="clicar(1)">
+<img class="configImagens" src="Imagens/CDD2.jpg" onclick="clicar(2)">
+<img class="configImagens" src="Imagens/CDD3.jpg" onclick="clicar(3)">
+<img class="configImagens" src="Imagens/CDD4.jpg" onclick="clicar(4)">
+<img class="configImagens" src="Imagens/CDD5.jpg" onclick="clicar(5)">
+<img class="configImagens" src="Imagens/CDD6.jpg" onclick="clicar(6)">
+<img class="configImagens" src="Imagens/CDD7.jpg" onclick="clicar(7)">
+
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>
